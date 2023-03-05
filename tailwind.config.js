@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class', '[data-mode="dark"]'],
+  darkMode: ['class','[data-mode="dark"]'],
   content: [ 
-    "./src/**/*.{js, jsx, ts, tsx}",
+    // Don't put spaces in the content
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extends: {
@@ -13,10 +14,8 @@ module.exports = {
             'component-dark': '#3f3f46',
             'primary': '',
             'danger': '',
-
           }
     },
-
 },
   plugins: [],
 }
