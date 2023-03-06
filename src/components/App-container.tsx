@@ -4,6 +4,7 @@ import { BaseText } from "./base-text"
 import { ThemeToggle } from "../stores/theme-toggle"
 import { useStore } from "../stores"
 import { useEffect } from "react"
+import { TaskList } from "./task-list"
 
 
 export const AppContainer = observer(() => {
@@ -22,7 +23,7 @@ export const AppContainer = observer(() => {
                                 </div>
                                 <ThemeToggle></ThemeToggle>
                         </div>
-                                <BaseText> Hello World </BaseText>
+                                <TaskList></TaskList>
                 </div>
         )
 })

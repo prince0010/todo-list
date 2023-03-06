@@ -2,6 +2,8 @@ import { observer } from 'mobx-react'
 import {IoIosSunny, IoIosMoon} from 'react-icons/io'
 import { useStore } from '../stores'
 
+// AFTER_LIGHT_CLASS IS THE MAIN BALL IN THIS BUTTON PART WHERE IT WILL MOVE TO RIGHT FOR THE AFTER_DARK_CLASS -24px and if
+//  clicked again it will go back to the AFTER_LIGHT_CLASS 3px (3px to 24px is the range or distance of left to right movement slide) and so on 
 const AFTER_LIGHT_CLASS ='after:left-[3px]' 
 const AFTER_DARK_CLASS = 'after:left-[24px]'
 
@@ -17,11 +19,10 @@ export const ThemeToggle = observer (() => {
         gap-[3px]
         text-[18px]
         bg-primary
-        text-dark
-        rounded-full
+        text-light
         p-[3px]
         relative
-        after:content-['']
+        rounded-full
         after:absolute
         after:bg-light
         after:h-[18px]
