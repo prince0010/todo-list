@@ -3,7 +3,7 @@ import {IoIosSunny, IoIosMoon} from 'react-icons/io'
 import { useStore } from '../stores'
 
 const AFTER_LIGHT_CLASS ='after:left-[3px]' 
-const AFTER_DARK_CLASS = 'after:left-[calc(3px+18px+3px)]'
+const AFTER_DARK_CLASS = 'after:left-[24px]'
 
 export const ThemeToggle = observer (() => {
     const store = useStore()
