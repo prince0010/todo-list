@@ -28,7 +28,7 @@ export const ThemeToggle = observer (() => {
         after:w-[18px]
         after:rounded-full
         after:ease-in-out
-        after:duration-300
+        after:duration-500
         ${store.theme.mode(AFTER_LIGHT_CLASS, AFTER_DARK_CLASS)}
    `}
     >
