@@ -4,6 +4,7 @@ import { TaskInterface } from "../interaces";
 const STORAGE_KEY = '@tasks'
 
 export class Task {
+    [x: string]: any;
     constructor() {
         makeObservable(this)
     }
@@ -18,6 +19,16 @@ export class Task {
 
     @observable
     protected _tasks: TaskInterface[] = []
+
+    @observable
+    protected _tasksEdit?: TaskInterface
+
+
+    @computed
+    get taskEdit(){
+        return this._tasksEdit
+
+    }
 
     @computed
      get tasks() {
@@ -66,6 +77,7 @@ export class Task {
                 ... task,
                 title
             }
+            this._tasksEdit = undefined
             this.sync()
         })
     }
