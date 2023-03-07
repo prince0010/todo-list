@@ -13,6 +13,7 @@ export const TaskItem = () => {
      rounded-lg
      dark:bg-component-dark
      gap-2
+     shadow-lg
      '>
         <button>
             <BaseText>
