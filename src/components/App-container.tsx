@@ -17,9 +17,9 @@ export const AppContainer = observer(() => {
         return(
                 <div className="max-w-screen-md mx-auto p-3">
                         <div className="flex items-center justify-between">
-                                <div className="flex items-center">
+                                <div className="flex flex-col items-center">
                                 <img src={Logo} alt="logo" />
-                                <div className="text-xl text-primary"> Todo </div>
+                                <div className="text-m text-primary"> SGV & Co. </div>
                                 </div>
                                 <ThemeToggle></ThemeToggle>
                         </div>

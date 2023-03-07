@@ -30,7 +30,7 @@ export class Theme{
             }
             localStorage[STORAGE_KEY] = this._themeMode
         }
-        // Computing if the dark is true or light is true
+        // Computing if the dark is true or light is true and dapat naa na sulod sa single quote ang dark and light na variable name sa sulod sa switch case
         @computed
         mode(light: any, dark: any){
             switch (this._themeMode) {
