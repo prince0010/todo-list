@@ -45,9 +45,9 @@ export const TaskInput = observer(() => {
             onInput = {(e) => setTitle(e.currentTarget.value)}
             //Keyboard if tapped enter key in keyboard
             onKeyDown = {(e) => (e.key === 'Enter' ? submit() : '' )}
-          type="text" name="" id="" placeholder="+ Add New Task" className="bg-transparent outline-0 flex-1 px-3"/>
+          type="text" name="" id="" placeholder= '+ Add Task' className="bg-transparent outline-0 flex-1 px-2"/>
           
-          <button onClick={() => submit()} className = "bg-dark px-3 py-2 text-sm text-light rounded-lg dark:bg-orange-300 dark:text-black shadow-lg">
+          <button onClick={() => submit()} className = "bg-dark px-3 py-2 text-sm text-light rounded-lg dark:bg-orange-300 dark:text-black font-bold shadow-lg">
             {
                 store.task.taskEdit ? 'Update' : 'Add'
              }

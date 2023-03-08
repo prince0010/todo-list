@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { MdCheckBox, MdCheckBoxOutlineBlank, MdDelete } from 'react-icons/md'
+import { MdCheckBox, MdCheckBoxOutlineBlank, MdDelete, MdEnergySavingsLeaf } from 'react-icons/md'
 import { TaskInterface } from '../interaces'
 import { useStore } from '../stores'
 import { BaseText } from "./base-text"
@@ -78,28 +78,31 @@ export const TaskItem = (props: Props) => {
                 //opposite of isDone if its not done or opposite of isDone (!isDone) then the checkbox will be in MdCheckBoxOutlineBlank
                 //else if it isDone or being clicked then it will display the MdCheckBox or the box will be checked
                 !isDone ? (
-                <BaseText>
-                <MdCheckBoxOutlineBlank></MdCheckBoxOutlineBlank>
+                <BaseText className='flex justify-center gap-1  text-dark dark:text-orange-300'>
+                <MdCheckBoxOutlineBlank></MdCheckBoxOutlineBlank>  <MdEnergySavingsLeaf></MdEnergySavingsLeaf>
                 </BaseText> ) : (
-                <MdCheckBox className='text-dark dark:text-orange-300'></MdCheckBox>
+                    <BaseText className='flex justify-center gap-1 text-dark dark:text-orange-300'>
+                <MdCheckBox></MdCheckBox> <MdEnergySavingsLeaf></MdEnergySavingsLeaf>
+                </BaseText>
 )            }          
         </button>
 
-        {/* This is for Crossing if the task is done */}
+        {/* This is for a feature that is slash Crossing if the task is done or if user clicked the checkbox */}
         <div className='truncate flex-1 cursor-pointer' onClick= {() => store.task.edit(props.task)}>
             <BaseText 
             innerref={labelRef}
             className={`
-            px-3
+            px-1
             truncate 
             inline
             relative
             after:content-['']
             after:absolute
             after:left-0
-            after:h-[2px]
-            after:top-[calc(50%+2px)]
+            after:h-[3px]
+            after:top-[calc(50%+1px)]
             after:bg-slash
+            dark:after:bg-orange-300
             after:duration-300
             after:ease-in-out
             after:transition-width

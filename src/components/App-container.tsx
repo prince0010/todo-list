@@ -1,6 +1,5 @@
 import { observer } from "mobx-react"
 import Logo from '../assets/icon.png'
-import { BaseText } from "./base-text"
 import { ThemeToggle } from "../stores/theme-toggle"
 import { useStore } from "../stores"
 import { useEffect } from "react"

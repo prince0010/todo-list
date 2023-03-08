@@ -50,17 +50,17 @@ export class Task {
      }
 
      protected generateId(): number {
-      let rand = Math.random()
+        let rand = Math.random()
+        while(this._tasks.find(task => task.id === rand)) {
+            rand = Math.random();
+        }
 
-      while(this._tasks.find(task => task.id === rand)){
-        rand = Math.random()
-      }
-      return rand
+        return rand;
     }
 
     protected find(id: TaskInterface['id'], callback: (task: TaskInterface, index: number) => void){
         const index = this._tasks.findIndex((task) => task.id === id)
-        if(id !== -1){
+        if (index !== -1){
             callback(this._tasks[index], index)      
         }
     } 
@@ -81,7 +81,7 @@ export class Task {
     update(id: TaskInterface['id'], title: string){
         this.find(id, (task, i) => {
             this._tasks[i] = {
-                ... task,
+                ...task,
                 title
             }
             this._tasksEdit = undefined
@@ -101,7 +101,7 @@ export class Task {
     toggleDone(id: TaskInterface['id']){
         this.find(id, (task, i) => {
             this._tasks[i] = {
-                ... task,
+                ...task,
                 isDone: !task.isDone,
                 // Update when it is completed only, show tasks show in first
                 updatedAt: !task.isDone ? new Date().getTime() : task.updatedAt 
