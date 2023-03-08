@@ -56,9 +56,7 @@ export const TaskItem = (props: Props) => {
             after:duration-300
             after:ease-in-out
             after:transition-width
-            ${
-                isDone ? 'after:W-full' : 'after:w-0'
-            }
+            ${isDone ? 'after:w-full' : 'after:w-0'}
             `}>{props.task.title}</BaseText>
         </div>
         <button className='text-danger '
