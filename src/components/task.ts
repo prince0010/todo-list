@@ -6,6 +6,7 @@ const STORAGE_KEY = '@tasks'
 export class Task {
     [x: string]: any;
     constructor() {
+        this.fetchs()
         makeObservable(this)
     }
 
@@ -42,6 +43,12 @@ export class Task {
             .sort((a,b) => b.updatedAt - a.updatedAt)
      }
 
+     //editing and Updating
+     @action
+     edit(task: TaskInterface){
+        this._tasksEdit = task
+     }
+
      protected generateId(): number {
       let rand = Math.random()
 
@@ -71,7 +78,7 @@ export class Task {
      }
 
     @action
-    updated(id: TaskInterface['id'], title: string){
+    update(id: TaskInterface['id'], title: string){
         this.find(id, (task, i) => {
             this._tasks[i] = {
                 ... task,

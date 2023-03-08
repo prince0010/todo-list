@@ -5,6 +5,7 @@ import { ThemeToggle } from "../stores/theme-toggle"
 import { useStore } from "../stores"
 import { useEffect } from "react"
 import { TaskList } from "./task-list"
+import { TaskInput } from "./task-input"
 
 
 export const AppContainer = observer(() => {
@@ -23,6 +24,7 @@ export const AppContainer = observer(() => {
                                 </div>
                                 <ThemeToggle></ThemeToggle>
                         </div>
+                                <TaskInput></TaskInput>
                                 <TaskList></TaskList>
                 </div>
         )
