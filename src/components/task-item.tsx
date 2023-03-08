@@ -14,6 +14,7 @@ export const TaskItem = (props: Props) => {
 
     const [isDone, setIsDone] = useState(props.task.isDone)
   
+
     return(
      <div className='
      flex
@@ -24,7 +25,7 @@ export const TaskItem = (props: Props) => {
      bg-component
      rounded-lg
      dark:bg-component-dark
-     gap-2
+     gap-3
      shadow-lg
      '>
         <button onClick={() => setIsDone(!isDone)}>
@@ -38,8 +39,27 @@ export const TaskItem = (props: Props) => {
                 <MdCheckBox className='text-primary'></MdCheckBox>
 )            }          
         </button>
+
+        {/* This is for Crossing if the task is done */}
         <div className='truncate flex-1 cursor-pointer' onClick= {() => store.task.edit(props.task)}>
-            <BaseText className="truncate dark:text-primary text-danger">{props.task.title}</BaseText>
+            <BaseText className={`
+            px-3
+            truncate 
+            inline
+            relative
+            after:content-['']
+            after:absolute
+            after:left-0
+            after:h-[2px]
+            after:top-[calc(50%+2px)]
+            after:bg-primary
+            after:duration-300
+            after:ease-in-out
+            after:transition-width
+            ${
+                isDone ? 'after:W-full' : 'after:w-0'
+            }
+            `}>{props.task.title}</BaseText>
         </div>
         <button className='text-danger '
         // If Click the Delete icon it will remove the task

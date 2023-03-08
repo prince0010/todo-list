@@ -13,6 +13,9 @@ module.exports = {
             'component-dark': '#3f3f46',
             'primary': '#74DEFB',
             'danger': '#eF4444',
+          },
+          transitionProperty:{
+            'width': 'width' 
           }
     },
 },
