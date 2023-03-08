@@ -1,5 +1,5 @@
 import { observer } from "mobx-react"
-import Logo from '../logo.svg'
+import Logo from '../assets/icon.png'
 import { BaseText } from "./base-text"
 import { ThemeToggle } from "../stores/theme-toggle"
 import { useStore } from "../stores"
@@ -19,8 +19,8 @@ export const AppContainer = observer(() => {
                 <div className="max-w-screen-md mx-auto p-3">
                         <div className="flex items-center justify-between">
                                 <div className="flex flex-col items-center">
-                                <img src={Logo} alt="logo" />
-                                <div className="text-m text-primary"> SGV & Co. </div>
+                                <img src={Logo} alt="logo" className="w-[6rem]" />
+                                <div className="text-l text-dark font-bold dark:text-addedc"> To-do Web</div>
                                 </div>
                                 <ThemeToggle></ThemeToggle>
                         </div>

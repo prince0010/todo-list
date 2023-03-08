@@ -20,7 +20,7 @@ export const TaskList = observer(() => {
             store.task.tasks.map((task) => <TaskItem key={task.id} task ={task}></TaskItem>)
         }
             {/* <div className="py-3 dark:text-light"></div> */}
-        <BaseText className="py-7 px-3">
+        <BaseText className="p-3">
 
             Completed ({store.task.completedTasks.length})
         </BaseText>

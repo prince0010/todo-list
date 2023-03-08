@@ -18,8 +18,10 @@ export const ThemeToggle = observer (() => {
         item-center
         gap-[3px]
         text-[18px]
-        bg-primary
-        text-light
+        bg-dark
+        text-sun
+        dark:text-dark
+        dark:bg-addedc
         p-[3px]
         relative
         rounded-full
