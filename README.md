@@ -1,4 +1,4 @@
-## Example Picture (NOT YET FINISH)
+## Example Picture
 
 ### `To-do Web`
 
