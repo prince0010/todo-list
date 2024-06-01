@@ -14,6 +14,9 @@ export class Task {
         try {
             const storedTasks = localStorage.getItem(STORAGE_KEY);
             this._tasks = storedTasks ? JSON.parse(storedTasks) : [];
+            if (!Array.isArray(this._tasks)) {
+                this._tasks = [];
+            }
         } catch (error) {
             console.error("Failed to parse tasks from localStorage:", error);
             this._tasks = [];
