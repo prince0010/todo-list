@@ -1,5 +1,5 @@
 import { action, computed, makeObservable, observable } from "mobx";
-import { TaskInterface } from "../interfaces";
+import { TaskInterface } from "../interaces";
 
 const STORAGE_KEY = '@tasks';
 
